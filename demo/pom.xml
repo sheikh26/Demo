@@ -52,6 +52,7 @@
          <artifactId>spring-boot-starter-test</artifactId>
          <scope>test</scope>
       </dependency>
+      
 		<!-- Exclude Spring Boot's Default Logging -->
 <dependency>
 	<groupId>org.springframework.boot</groupId>
