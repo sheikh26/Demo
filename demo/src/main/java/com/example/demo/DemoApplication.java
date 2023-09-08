@@ -13,15 +13,20 @@ import com.example.demo.model.Student;
 import com.example.demo.repository.StudentRepository;
 
 @SpringBootApplication
-public class DemoApplication implements CommandLineRunner{
+public class DemoApplication {
+
+//public class DemoApplication implements CommandLineRunner{
 	@Autowired
 	StudentRepository studentRepository;
 
 	public static void main(String[] args) throws BeansException {
-		//SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(DemoApplication.class, args);
 		
-		ApplicationContext context = SpringApplication.run(DemoApplication.class, args);
-		StudentRepository studentRepository= context.getBean(StudentRepository.class);
+		/*
+		 * ApplicationContext context = SpringApplication.run(DemoApplication.class,
+		 * args); StudentRepository studentRepository=
+		 * context.getBean(StudentRepository.class);
+		 */
 	// Add student//
 
 	//	Student student = new Student();
@@ -43,18 +48,17 @@ public class DemoApplication implements CommandLineRunner{
 	
 	
 	// Get All student by jpa Query//
-		List<Student> 	student =  studentRepository.getStudentByFirstName("Faruk");
-		student.forEach(e->
-		System.out.println(e));
+//		List<Student> 	student =  studentRepository.getStudentByFirstName("Faruk");
+//		student.forEach(e->
+//		System.out.println(e));
 	
 	}
 
-	@Override
-	public void run(String... args) throws Exception {
-		
-		List<Student> 	student= studentRepository.getAllStudents();
-		student.forEach(e->
-		System.out.println(e));
-	}
+	/*
+	 * @Override public void run(String... args) throws Exception {
+	 * 
+	 * List<Student> student= studentRepository.getAllStudents();
+	 * student.forEach(e-> System.out.println(e)); }
+	 */
 
 }

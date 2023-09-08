@@ -71,6 +71,7 @@
          <a href="/list">Student List</a>&nbsp;
          <a href="/search">Student Search By ID</a>&nbsp;
          <a href="/byFirstName">Student Search By First Name</a>&nbsp;
+         <a href="/resource">I18 I10</a>&nbsp;
          <c:if test="${student.id ne null}"><b>|</b>&nbsp;<a href="/registration">Registration</a></c:if>
          </div>
 

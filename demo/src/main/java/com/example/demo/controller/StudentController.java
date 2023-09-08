@@ -23,6 +23,7 @@ public class StudentController {
    @Autowired
    private StudentService studentService;
    
+   //@GetMapping(value = {"/registration"})
    @GetMapping(value = {"/","/registration"})
    public String registration(Map<String, Object> model) {
       model.put("student", new StudentDTO());
