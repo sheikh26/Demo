@@ -11,7 +11,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.example.demo.dto.StudentDTO;
 import com.example.demo.service.StudentService;
@@ -31,14 +33,24 @@ public class StudentController {
    }
    
    @PostMapping("/home")
-   public String createStudent
-         (@ModelAttribute("student") StudentDTO studentDto) {
+   public String createStudent(StudentDTO studentDto) {
 	   logger.debug("This is a DEBUG statement");
 		logger.warn("This is a WARN statement");
 		logger.error("This is a ERROR statement");
       studentService.createOrUpdateStudent(studentDto);
       return "redirect:/list";   
    }
+   
+   //using post man
+//   @PostMapping("/home")
+//   @ResponseBody
+//   public String createStudent(@RequestBody StudentDTO studentDto) {
+//	   logger.debug("This is a DEBUG statement");
+//		logger.warn("This is a WARN statement");
+//		logger.error("This is a ERROR statement");
+//      studentService.createOrUpdateStudent(studentDto);
+//      return studentDto.getFirstName();   
+//   }
    
    @GetMapping("/list")
    public String listOfStudent(Model model) {

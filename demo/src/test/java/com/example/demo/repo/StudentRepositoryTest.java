@@ -8,6 +8,8 @@ import org.mockito.Mock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertNull;
 
 import java.util.List;
 
@@ -30,7 +32,7 @@ public class StudentRepositoryTest {
     	student.setLastName("Khan");
     	student.setEmailId("Mic@gmail.com");
     	studentRepository.save(student);
-    	
+    	assertNull("Student is not Added "+student);
        
     }
     
@@ -49,7 +51,8 @@ public class StudentRepositoryTest {
     @AfterEach
     void tearDown() {
         System.out.println("tearing down");
-       // studentRepository.deleteAll();
+//        studentRepository.deleteAll();
+//        assertNotNull(studentRepository);
     }
 
     @BeforeEach
