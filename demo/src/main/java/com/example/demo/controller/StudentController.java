@@ -25,7 +25,13 @@ public class StudentController {
    @Autowired
    private StudentService studentService;
    
-   //@GetMapping(value = {"/registration"})
+//   @GetMapping(value = {"/"})
+//   //@GetMapping(value = {"/","/registration"})
+//   public String registration() {
+//      //model.put("student", new StudentDTO());
+//      return "student-add-update";
+//   }
+   
    @GetMapping(value = {"/","/registration"})
    public String registration(Map<String, Object> model) {
       model.put("student", new StudentDTO());

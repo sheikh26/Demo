@@ -42,7 +42,7 @@
 <div class="card">
             <div class="card-body">
                 <div class="col-md-10">
-<form:form method="POST" modelAttribute="student" action="/home" name="student">
+<form:form method="POST" action="/home">
       <form:hidden path="id"/>
 
     <div class="row">
