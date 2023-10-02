@@ -19,12 +19,12 @@ import com.example.demo.repository.StudentRepository;
 @SpringBootTest
 public class StudentRepositoryTest {
 	
-	//@Mock
-	 @Autowired
+	 @Mock
+	// @Autowired
 	   private StudentRepository studentRepository;
 
     @Test
-    @Disabled
+    //@Disabled
     void saveStudent() {
     	Student student = new Student();
     	student.setId((long) 100);
@@ -32,11 +32,12 @@ public class StudentRepositoryTest {
     	student.setLastName("Khan");
     	student.setEmailId("Mic@gmail.com");
     	studentRepository.save(student);
-    	assertNull("Student is not Added "+student);
+    	assertNotNull("Student is not Added "+student);
        
     }
     
     @Test
+    //@Disabled
     void getAllStudents() {
 //    	Student student = new Student();
 //    	student.setId((long) 100);

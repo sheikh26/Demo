@@ -1,4 +1,4 @@
-package com.example.demo;
+package com.example.demo.repo;
 
 public class Calculator {
     //sum

@@ -12,8 +12,8 @@ import org.springframework.stereotype.Repository;
 import com.example.demo.model.Student;
 
 
-@Repository
-public interface StudentRepository extends JpaRepository<Student, Long>{
+	@Repository
+	public interface StudentRepository extends JpaRepository<Student, Long>{
 
 	
 	public List<Student> findByFirstName(String firstName);

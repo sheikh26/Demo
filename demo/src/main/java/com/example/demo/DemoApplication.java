@@ -8,10 +8,12 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 import com.example.demo.model.Student;
 import com.example.demo.repository.StudentRepository;
 
+@EnableScheduling
 @SpringBootApplication
 public class DemoApplication {
 
