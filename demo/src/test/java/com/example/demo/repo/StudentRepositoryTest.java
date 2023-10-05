@@ -20,7 +20,7 @@ import com.example.demo.repository.StudentRepository;
 public class StudentRepositoryTest {
 	
 	 @Mock
-	// @Autowired
+	 //@Autowired
 	   private StudentRepository studentRepository;
 
     @Test
