@@ -10,12 +10,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 class DemoApplicationTests {
 	private Calculator c = new Calculator();
 
+//	@Test
+//    @Disabled
+//	void contextLoads() {
+//	}
 	@Test
-    @Disabled
-	void contextLoads() {
-	}
-	@Test
-	@Disabled
+	//@Disabled
     void testSum() {
         //expected
         int expectedResult = 17;
@@ -23,4 +23,9 @@ class DemoApplicationTests {
         int actualResult = c.doSum(12, 3, 2);
         assertThat(actualResult).isEqualTo(expectedResult);
     }
+	
+	// Methods & Description
+	
+	
+
 }
