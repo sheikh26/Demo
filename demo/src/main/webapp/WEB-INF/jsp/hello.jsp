@@ -30,6 +30,10 @@
  // String name=resource.getString("language.change");
   String german=resource_de.getString("welcome.message.de"); %>
   <%-- <%=german%> --%>
+  
+  <% ResourceBundle resource_hi = ResourceBundle.getBundle("messages_hi");
+ // String name=resource.getString("language.change");
+  String hindi=resource_hi.getString("welcome.message.hi"); %>
 
     <h2>
     </h2>
@@ -37,6 +41,7 @@
     <select name="langugeId"> 
     <option value="english">English</option> 
     <option value="german">German</option> 
+    <option value="hindi">Hindi</option> 
   </select> 
    <input type="submit" value="Submit"> 
 </form> 
@@ -48,7 +53,11 @@ String languge = request.getParameter("langugeId");
          <%=english%>
       <% } if (languge!=null && languge.equals("german")){ %>
          <%=german%>
+         <% } if (languge!=null && languge.equals("hindi")){ %>
+         <%=hindi%>
       <% } %>
+      
+      
   <%-- <%=productSelected%> --%>
 
 </body>
